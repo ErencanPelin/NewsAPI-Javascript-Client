@@ -28,6 +28,11 @@ var query = new NewsAPIQuery()
     .setCountry("us")
     .setCategory("business");
 ```
+Sources:
+```js
+var query = new NewsAPIQuery()
+    .setLanguage("en");
+```
 
 ## 3. Sending the Query
 Everything:
@@ -39,6 +44,12 @@ console.log(response.body); //contains articles as an array
 Top Headlines:
 ```js
 var response = await (client.topHeadlines(query)); //where response is a NewsAPIResponse object
+console.log(response.status);
+console.log(response.body); //contains articles as an array
+```
+Sources:
+```js
+var response = await (client.sources(query)); //where response is a NewsAPIResponse object
 console.log(response.status);
 console.log(response.body); //contains articles as an array
 ```
