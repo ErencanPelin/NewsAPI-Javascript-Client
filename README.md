@@ -6,12 +6,24 @@ Download the code and move the /Src folder into your own project. The only impor
 
 ## 1. Creating a NewsAPIClient object
 ```js
-var client = new NewsAPIClient(APIKey);
+var client = new NewsAPIClient(APIKey); //replace APIKey with your own API key as a string
+var client = new NewsAPIClient("1234567890"); //like this
 ```
 
 ## 2. Creating a NewsAPIQuery object
+Settings keywords:
 ```js
-var query = new NewsAPIQuery("bitcoin");
+var query = new NewsAPIQuery("bitcoin-crypto");
+```
+From and To dates
+```js
+var query = new NewsAPIQuery("bitcoin-crypto", "2023-07-18", "2023-08-18");
+```
+SortBy
+```js
+var query = new NewsAPIQuery("bitcoin-crypto", "2023-07-18", "2023-08-18", "popularity");
+var query = new NewsAPIQuery("bitcoin-crypto", "2023-07-18", "2023-08-18", "publishedAt");
+var query = new NewsAPIQuery("bitcoin-crypto", "2023-07-18", "2023-08-18", "relevancy");
 ```
 
 ## 3. Sending the Query
