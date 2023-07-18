@@ -12,6 +12,7 @@ var client = new NewsAPIClient("1234567890"); //like this
 ```
 
 ## 2. Creating a NewsAPIQuery object
+Everything:
 ```js
 var query = new NewsAPIQuery()
     .setKeywords("bitcoin")
@@ -20,10 +21,25 @@ var query = new NewsAPIQuery()
     .setSortBy("popularity")
     .setDomains("techcrunch.com, thenextweb.com");
 ```
+Top-Headlines:
+```js
+var query = new NewsAPIQuery()
+    .setKeywords("trump")
+    .setCountry("us")
+    .setCategory("business")
+    .setSources("bbc-news");
+```
 
 ## 3. Sending the Query
+Everything:
 ```js
 var response = await (client.everything(query)); //where response is a NewsAPIResponse object
+console.log(response.status);
+console.log(response.body); //contains articles as an array
+```
+Top Headlines:
+```js
+var response = await (client.topHeadlines(query)); //where response is a NewsAPIResponse object
 console.log(response.status);
 console.log(response.body); //contains articles as an array
 ```
