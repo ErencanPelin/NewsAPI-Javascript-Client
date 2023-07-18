@@ -1,5 +1,6 @@
 # NewsAPI-Javascript-Client
-A Javascript implementation package of the popular NewsAPI (that actually works)
+A Javascript implementation package of the popular [NewsAPI](https://newsapi.org/) (that actually works)
+It is recommended you view the [NewsAPI documentation](https://newsapi.org/docs) to understand what each parameter does and how the endpoint is structured before using this package.
 
 # How to use
 Download the code and move the /Src folder into your own project. The only important file for this to work is the /Src/index.js script which contains the main code that queries the NewsAPI
