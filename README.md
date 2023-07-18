@@ -11,19 +11,13 @@ var client = new NewsAPIClient("1234567890"); //like this
 ```
 
 ## 2. Creating a NewsAPIQuery object
-Settings keywords:
 ```js
-var query = new NewsAPIQuery("bitcoin-crypto");
-```
-From and To dates
-```js
-var query = new NewsAPIQuery("bitcoin-crypto", "2023-07-18", "2023-08-18");
-```
-SortBy
-```js
-var query = new NewsAPIQuery("bitcoin-crypto", "2023-07-18", "2023-08-18", "popularity");
-var query = new NewsAPIQuery("bitcoin-crypto", "2023-07-18", "2023-08-18", "publishedAt");
-var query = new NewsAPIQuery("bitcoin-crypto", "2023-07-18", "2023-08-18", "relevancy");
+var query = new NewsAPIQuery()
+    .setKeywords("bitcoin")
+    .setFrom("2023-07-17")
+    .setTo("2023-08-17")
+    .setSortBy("popularity")
+    .setDomains("techcrunch.com, thenextweb.com");
 ```
 
 ## 3. Sending the Query

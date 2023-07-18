@@ -22,16 +22,28 @@ export class NewsAPIClient {
 }
 
 export class NewsAPIQuery {
-    constructor(keywords, from, to, sortBy, domains) {
-        this.keywords = keywords,
-            this.from = from;
+    setKeywords(keywords) {
+        this.keywords = keywords;
+        return this;
+    }
+    setFrom(from) {
+        this.from = from;
+        return this;
+    }
+    setTo(to) {
         this.to = to;
+        return this;
+    }
+    setSortBy(sortBy) {
         this.sortBy = sortBy;
+        return this;
+    }
+    setDomains(domains) {
         this.domains = domains;
+        return this;
     }
 
-    getQuery()
-    {
+    getQuery() {
         var q = this.keywords;
         if (this.from != null) q += "&from=" + this.from;
         if (this.to != null) q += "&to=" + this.to;
