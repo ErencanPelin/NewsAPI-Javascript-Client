@@ -26,8 +26,7 @@ Top-Headlines:
 var query = new NewsAPIQuery()
     .setKeywords("trump")
     .setCountry("us")
-    .setCategory("business")
-    .setSources("bbc-news");
+    .setCategory("business");
 ```
 
 ## 3. Sending the Query
