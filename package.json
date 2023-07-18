@@ -1,0 +1,27 @@
+{
+    "name": "newsapi-javascript-client",
+    "description": "A javascript client for handling the NewsAPI",
+    "version": "1.0.0",
+    "main": "./src/index.js",
+    "type": "module",
+    "devDependencies": {
+        "@types/node": "^20.4.2",
+        "typescript": "^4.2.2"
+    },
+    "scripts": {
+        "test": "node ./tests/tests.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ErencanPelin/NewsAPI-Javascript-Client.git"
+    },
+    "keywords": [
+        "newsAPI"
+    ],
+    "author": "Erencan Pelin",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ErencanPelin/NewsAPI-Javascript-Client/issues"
+    },
+    "homepage": "https://github.com/ErencanPelin/NewsAPI-Javascript-Client#readme"
+}
