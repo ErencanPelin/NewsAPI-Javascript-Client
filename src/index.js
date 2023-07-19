@@ -1,5 +1,3 @@
-import { stat } from "fs";
-
 export class NewsAPIClient {
     constructor(apiKey) {
         this.APIKey = apiKey;
@@ -35,7 +33,7 @@ export class NewsAPIClient {
 
     verifyAPIKey() {
         if (this.APIKey == null)
-            throw "No API key spcified";
+            throw "No API key specified";
     }
 }
 
